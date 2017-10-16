@@ -1,4 +1,4 @@
-# Apply DBSCAN on hand digits dataset
+# Apply DBSCAN
 # Author: Trinh Man Hoang - 14520320
 # Last Updated: 3/10/2017
 

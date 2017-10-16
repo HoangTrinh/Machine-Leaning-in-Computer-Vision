@@ -1,4 +1,4 @@
-# Apply Kmeans on hand digits dataset
+# Apply Kmeans
 # Author: Trinh Man Hoang - 14520320
 # Last Updated: 30/09/2017
 

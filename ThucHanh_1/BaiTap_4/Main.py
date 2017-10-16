@@ -24,7 +24,7 @@ spectralResult = Spectral.spectral(spec_data, 7)
 DBSCAN = DBSCAN.dbscan(X, 0.6, 3)
 
 # Agglomerative
-aggResult = Agglomerative.aggolomerative(X, 7)
+aggResult = Agglomerative.agglomerative(X, 7)
 
 # Visualize result
 

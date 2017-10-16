@@ -20,7 +20,7 @@ spectralResult = Spectral.spectral(data, 7)
 DBSCAN = DBSCAN.dbscan(data, 20, 1)
 
 # Agglomerative
-aggResult = Agglomerative.aggolomerative(data, 7)
+aggResult = Agglomerative.agglomerative(data, 7)
 
 # Visualize result
 X = PCA(n_components=2).fit_transform(data)

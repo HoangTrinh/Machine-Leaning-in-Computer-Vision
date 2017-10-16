@@ -1,10 +1,10 @@
-# Apply Agglomerative on hand digits dataset
+# Apply Agglomerative
 # Author: Trinh Man Hoang - 14520320
 # Last Updated: 3/10/2017
 
 from sklearn.cluster import AgglomerativeClustering
 
-def aggolomerative(data, nCluster):
+def agglomerative(data, nCluster):
     # Load data
     X = data
 

@@ -1,4 +1,4 @@
-# Apply Spectral on hand digits dataset
+# Apply Spectral
 # Author: Trinh Man Hoang - 14520320
 # Last Updated: 2/10/2017
 
