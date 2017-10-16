@@ -9,21 +9,12 @@ from sklearn.datasets import load_digits
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import scale
 
-# Load data & reshape feature space by PCA
-digits = load_digits()
-X = scale(digits.data)
-X = PCA(n_components=2).fit_transform(X)
+def kmeans(data,k):
+    # Load data
+    X = data
 
-# Apply Kmeans
-y = KMeans(n_clusters=10).fit_predict(X)
+    # Apply Kmeans
+    y = KMeans(n_clusters=k).fit_predict(X)
 
-# Visualize result
-plt.subplot(221)
-plt.scatter(X[:, 0], X[:, 1], c=y)
-plt.title('Bai Tap 2 - Kmeans')
-
-plt.subplot(222)
-plt.scatter(X[:, 0], X[:, 1], c=digits.target)
-plt.title('Bai Tap 2 - True Labels')
-plt.show()
+    return y
 
