@@ -19,7 +19,7 @@ def save():
     np.save(file='data.npy',arr=X)
 
 # Just uncomment & run the line below 1 time
-save()
+#save()
 
 
 # Load features matrix
