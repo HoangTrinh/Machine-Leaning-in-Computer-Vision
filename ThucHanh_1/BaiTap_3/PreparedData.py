@@ -12,10 +12,12 @@ import numpy as np
 def save():
     lfw_people = fetch_lfw_people(min_faces_per_person=70, resize=0.4)
     np.save(file='target.npy', arr=lfw_people.target)
-    X = np.array([]).reshape(0,1850)
-    for image in lfw_people.images:
-        lbt_image = local_binary_pattern(image,P=8,R=0.5).flatten()
-        X = np.append(X,[lbt_image],axis=0)
+    X = []
+    for i in range(len(lfw_people.images)):
+        lbt_image = local_binary_pattern(lfw_people.images[i], P=24, R=3, method='uniform')
+        (lbt_hist,_) = np.histogram(lbt_image.ravel(), bins=int(lbt_image.max() + 1), range=(0, 24 + 2))
+        X.append(lbt_hist)
+    X = np.array(X)
     np.save(file='data.npy',arr=X)
 
 # Just uncomment & run the line below 1 time
